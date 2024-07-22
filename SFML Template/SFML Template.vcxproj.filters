@@ -148,13 +148,13 @@
     <Image Include="Resources\res\Silver-Medal.png">
       <Filter>Resources\res</Filter>
     </Image>
-    <Image Include="Resources\res\Splash Background.png">
-      <Filter>Resources\res</Filter>
-    </Image>
     <Image Include="Resources\res\title.png">
       <Filter>Resources\res</Filter>
     </Image>
     <Image Include="Resources\res\sky.png">
+      <Filter>Resources\res</Filter>
+    </Image>
+    <Image Include="Resources\res\Splash Background.png">
       <Filter>Resources\res</Filter>
     </Image>
   </ItemGroup>
