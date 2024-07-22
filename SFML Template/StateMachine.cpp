@@ -54,11 +54,3 @@ namespace Sonar
 		return this->_states.top();
 	}
 }
-
-
-
-
-
-
-
-

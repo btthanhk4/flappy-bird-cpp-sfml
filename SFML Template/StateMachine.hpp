@@ -12,13 +12,13 @@ namespace Sonar
 	class StateMachine
 	{
 	public:
-		StateMachine( ) { }
-		~StateMachine( ) { }
+		StateMachine() { }
+		~StateMachine() { }
 
 		void AddState(StateRef newState, bool isReplacing = true);
-		void RemoveState( );
-
-		void ProcessStateChanges( );
+		void RemoveState();
+		// Run at start of each loop in Game.cpp
+		void ProcessStateChanges();
 
 		StateRef& GetActiveState();
 
@@ -27,16 +27,6 @@ namespace Sonar
 		StateRef _newState;
 
 		bool _isRemoving;
-		bool _isAdding;
-		bool _isReplacing;
+		bool _isAdding, _isReplacing;
 	};
 }
-
-
-
-
-
-
-
-
-

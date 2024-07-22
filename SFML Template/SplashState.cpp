@@ -3,6 +3,7 @@
 #include <sstream>
 #include "SplashState.hpp"
 #include "DEFINITIONS.hpp"
+#include "MainMenuState.hpp"
 
 #include <iostream>
 
@@ -15,7 +16,7 @@ namespace Sonar
 
 	void SplashState::Init()
 	{
-		_data->assets.LoadTextture("Splash State Background", SPLASH_SCENE_BACKGROUND_FILEPATH);
+		this->_data->assets.LoadTexture("Splash State Background", SPLASH_SCENE_BACKGROUND_FILEPATH);
 
 		_background.setTexture(this->_data->assets.GetTexture("Splash State Background"));
 	}
@@ -23,29 +24,31 @@ namespace Sonar
 	void SplashState::HandleInput()
 	{
 		sf::Event event;
-		while (_data->window.pollEvent(event))
+
+		while (this->_data->window.pollEvent(event))
 		{
 			if (sf::Event::Closed == event.type)
 			{
-				_data->window.close();
+				this->_data->window.close();
 			}
 		}
 	}
 
 	void SplashState::Update(float dt)
 	{
-		if (_clock.getElapsedTime().asSeconds() > SPLASH_STATE_SHOW_TIME)
+		if (this->_clock.getElapsedTime().asSeconds() > SPLASH_STATE_SHOW_TIME)
 		{
-			std::cout << "Go to Main Menu" << std::endl;
+			// Switch To Main Menu
+			this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
 		}
 	}
 
 	void SplashState::Draw(float dt)
 	{
-		_data->window.clear();
+		this->_data->window.clear(sf::Color::Red);
 
-		_data->window.draw(_background);
+		this->_data->window.draw(this->_background);
 
-		_data->window.display();
+		this->_data->window.display();
 	}
 }

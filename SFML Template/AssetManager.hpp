@@ -1,7 +1,6 @@
 #pragma once
 
 #include <map>
-
 #include <SFML/Graphics.hpp>
 
 namespace Sonar
@@ -12,23 +11,14 @@ namespace Sonar
 		AssetManager() { }
 		~AssetManager() { }
 
-		void LoadTextture(std::string name, std::string fileName);
+		void LoadTexture(std::string name, std::string fileName);
 		sf::Texture& GetTexture(std::string name);
 
 		void LoadFont(std::string name, std::string fileName);
 		sf::Font& GetFont(std::string name);
 
-	private :
+	private:
 		std::map<std::string, sf::Texture> _textures;
 		std::map<std::string, sf::Font> _fonts;
 	};
 }
-
-
-
-
-
-
-
-
-

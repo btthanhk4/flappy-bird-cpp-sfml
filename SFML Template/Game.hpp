@@ -25,6 +25,7 @@ namespace Sonar
 		Game(int width, int height, std::string title);
 
 	private:
+		// Updates run at 60 per second.
 		const float dt = 1.0f / 60.0f;
 		sf::Clock _clock;
 

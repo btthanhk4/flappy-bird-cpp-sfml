@@ -1,3 +1,5 @@
+#pragma once
+
 #include "InputManager.hpp"
 
 namespace Sonar
@@ -6,9 +8,9 @@ namespace Sonar
 	{
 		if (sf::Mouse::isButtonPressed(button))
 		{
-			sf::IntRect tempRect(object.getPosition().x, object.getPosition().y, object.getGlobalBounds().width, object.getGlobalBounds().height);
+			sf::IntRect playButtonRect(object.getPosition().x, object.getPosition().y, object.getGlobalBounds().width, object.getGlobalBounds().height);
 
-			if (tempRect.contains(sf::Mouse::getPosition(window)))
+			if (playButtonRect.contains(sf::Mouse::getPosition(window)))
 			{
 				return true;
 			}
@@ -17,7 +19,7 @@ namespace Sonar
 		return false;
 	}
 
-	sf::Vector2i GetMousePosition(sf::RenderWindow& window)
+	sf::Vector2i InputManager::GetMousePosition(sf::RenderWindow& window)
 	{
 		return sf::Mouse::getPosition(window);
 	}
