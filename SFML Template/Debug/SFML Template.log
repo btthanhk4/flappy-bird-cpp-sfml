@@ -1,2 +1,5 @@
 ﻿  main.cpp
+  StateMachine.cpp
+  Generating Code...
+  LINK : C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\Debug\SFML Template.exe not found or not built by the last incremental link; performing full link
   SFML Template.vcxproj -> C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\Debug\SFML Template.exe
