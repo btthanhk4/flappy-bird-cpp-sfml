@@ -20,6 +20,7 @@ namespace Sonar
 	private:
 		GameDataRef _data;
 		std::vector<sf::Sprite> pipeSprites;
+		std::vector<sf::Sprite > pipesToDelete;
 
 	};
 }

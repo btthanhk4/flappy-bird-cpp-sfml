@@ -1,6 +1,8 @@
 #include "Pipe.hpp"
 #include "DEFINITIONS.hpp"
 
+#include <iostream>
+
 namespace Sonar
 {
 	Pipe::Pipe(GameDataRef data) : _data(data)
@@ -37,12 +39,19 @@ namespace Sonar
 
 	void Pipe::MovePipes(float dt)
 	{
-		for (unsigned short int i = 0; i < pipeSprites.size(); i++)
+		for (int i = 0; i < pipeSprites.size(); i++)
 		{
-			sf::Vector2f position = pipeSprites.at(i).getPosition();
-			float movement = PIPE_MOVEMENT_SPEED * dt;
+			if (pipeSprites.at(i).getPosition().x < 0 - pipeSprites.at(i).getLocalBounds().width)
+			{
+				pipeSprites.erase(pipeSprites.begin() + i);
+			}
+			else
+			{
+				sf::Vector2f position = pipeSprites.at(i).getPosition();
+				float movement = PIPE_MOVEMENT_SPEED * dt;
 
-			pipeSprites.at(i).move(-movement, 0);
+				pipeSprites.at(i).move(-movement, 0);
+			}
 		}
 	}
 

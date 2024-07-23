@@ -1,1 +1,5 @@
-﻿LINK : fatal error LNK1168: cannot open C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\Debug\SFML Template.exe for writing
+﻿  GameState.cpp
+GameState.obj : error LNK2019: unresolved external symbol "public: __thiscall Sonar::Land::Land(class std::shared_ptr<struct Sonar::GameData>)" (??0Land@Sonar@@QAE@V?$shared_ptr@UGameData@Sonar@@@std@@@Z) referenced in function "public: virtual void __thiscall Sonar::GameState::Init(void)" (?Init@GameState@Sonar@@UAEXXZ)
+GameState.obj : error LNK2019: unresolved external symbol "public: void __thiscall Sonar::Land::MoveLand(float)" (?MoveLand@Land@Sonar@@QAEXM@Z) referenced in function "public: virtual void __thiscall Sonar::GameState::Update(float)" (?Update@GameState@Sonar@@UAEXM@Z)
+GameState.obj : error LNK2019: unresolved external symbol "public: void __thiscall Sonar::Land::DrawLand(void)" (?DrawLand@Land@Sonar@@QAEXXZ) referenced in function "public: virtual void __thiscall Sonar::GameState::Draw(float)" (?Draw@GameState@Sonar@@UAEXM@Z)
+C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\Debug\SFML Template.exe : fatal error LNK1120: 3 unresolved externals
