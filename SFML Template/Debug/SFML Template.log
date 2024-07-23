@@ -1,6 +1,1 @@
-﻿  GameState.cpp
-  main.cpp
-  MainMenuState.cpp
-  SplashState.cpp
-  Generating Code...
-  SFML Template.vcxproj -> C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\Debug\SFML Template.exe
+﻿LINK : fatal error LNK1168: cannot open C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\Debug\SFML Template.exe for writing
