@@ -3,6 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include "State.hpp"
 #include "Game.hpp"
+#include "Pipe.hpp"
 
 namespace Sonar
 {
@@ -21,5 +22,8 @@ namespace Sonar
 		GameDataRef _data;
 
 		sf::Sprite _background;
+
+		Pipe* pipe;
+
 	};
 }

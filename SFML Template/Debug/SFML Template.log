@@ -1,47 +1,6 @@
-﻿  AssetManager.cpp
-  Game.cpp
-  GameOverState.cpp
-  GameState.cpp
-  InputManager.cpp
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,135): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,135): warning C4244:         with
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,135): warning C4244:         [
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,135): warning C4244:             T=float
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,135): warning C4244:         ]
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,135): warning C4244:         and
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,135): warning C4244:         [
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,135): warning C4244:             T=int
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,135): warning C4244:         ]
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,103): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,103): warning C4244:         with
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,103): warning C4244:         [
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,103): warning C4244:             T=float
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,103): warning C4244:         ]
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,103): warning C4244:         and
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,103): warning C4244:         [
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,103): warning C4244:             T=int
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,103): warning C4244:         ]
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,75): warning C4244: 'argument': conversion from 'const T' to 'T', possible loss of data
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,75): warning C4244:         with
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,75): warning C4244:         [
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,75): warning C4244:             T=float
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,75): warning C4244:         ]
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,75): warning C4244:         and
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,75): warning C4244:         [
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,75): warning C4244:             T=int
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,75): warning C4244:         ]
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,51): warning C4244: 'argument': conversion from 'const T' to 'T', possible loss of data
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,51): warning C4244:         with
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,51): warning C4244:         [
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,51): warning C4244:             T=float
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,51): warning C4244:         ]
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,51): warning C4244:         and
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,51): warning C4244:         [
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,51): warning C4244:             T=int
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\InputManager.cpp(11,51): warning C4244:         ]
+﻿  GameState.cpp
+  main.cpp
   MainMenuState.cpp
   SplashState.cpp
-  StateMachine.cpp
-  main.cpp
   Generating Code...
   SFML Template.vcxproj -> C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\Debug\SFML Template.exe
