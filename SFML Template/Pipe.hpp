@@ -16,11 +16,15 @@ namespace Sonar
 		void SpawnInvisiblePipe();
 		void MovePipes(float dt);
 		void DrawPipes();
+		void RandomisePipeOffset();
 
 	private:
 		GameDataRef _data;
 		std::vector<sf::Sprite> pipeSprites;
 		std::vector<sf::Sprite > pipesToDelete;
+
+		int _landHeight;
+		int _pipeSpawnYOffset;
 
 	};
 }

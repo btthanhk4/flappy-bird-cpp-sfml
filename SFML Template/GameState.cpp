@@ -19,9 +19,11 @@ namespace Sonar
 		this->_data->assets.LoadTexture("Pipe Up", PIPE_UP_FILEPATH);
 		this->_data->assets.LoadTexture("Pipe Down", PIPE_DOWN_FILEPATH);
 		this->_data->assets.LoadTexture("Land", LAND_FILEPATH);
+		this->_data->assets.LoadTexture("Bird Frame 1", BIRD_FRAME_1_FILEPATH);
 
 		pipe = new Pipe(_data);
 		land = new Land(_data);
+		bird = new Bird(_data);
 
 		_background.setTexture(this->_data->assets.GetTexture("Game Background"));
 	}
@@ -52,6 +54,8 @@ namespace Sonar
 
 		if (clock.getElapsedTime().asSeconds() > PIPE_SPAWN_FREQUENCY)
 		{
+			pipe->RandomisePipeOffset();
+
 			pipe->SpawnInvisiblePipe();
 			pipe->SpawnBottomPipe();
 			pipe->SpawnTopPipe();
@@ -68,6 +72,7 @@ namespace Sonar
 
 		pipe->DrawPipes();
 		land->DrawLand();
+		bird->Draw();
 
 		this->_data->window.display();
 	}

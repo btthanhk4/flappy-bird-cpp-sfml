@@ -5,6 +5,7 @@
 #include "Game.hpp"
 #include "Pipe.hpp"
 #include "Land.hpp"
+#include "Bird.hpp"
 
 namespace Sonar
 {
@@ -26,6 +27,7 @@ namespace Sonar
 
 		Pipe* pipe;
 		Land* land;
+		Bird* bird;
 
 		sf::Clock clock;
 
