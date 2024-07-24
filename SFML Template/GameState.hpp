@@ -35,5 +35,8 @@ namespace Sonar
 
 		int _gameState;
 
+		sf::RectangleShape _gameOverFlash;
+		bool _flashOn;
+
 	};
 }
