@@ -1,6 +1,4 @@
 ﻿  Bird.cpp
-  Game.cpp
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\Game.cpp(12,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   GameOverState.cpp
   GameState.cpp
   Land.cpp
@@ -13,7 +11,6 @@ C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\Land.cpp(
 C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\Land.cpp(29,50): warning C4244:         [
 C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\Land.cpp(29,50): warning C4244:             T=float
 C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\Land.cpp(29,50): warning C4244:         ]
-  main.cpp
   MainMenuState.cpp
   Pipe.cpp
 C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\Pipe.cpp(18,51): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
@@ -35,5 +32,6 @@ C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\Pipe.cpp(
 C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\Pipe.cpp(36,51): warning C4244:         ]
 C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\Pipe.cpp(44,21): warning C4018: '<': signed/unsigned mismatch
   SplashState.cpp
+  main.cpp
   Generating Code...
   SFML Template.vcxproj -> C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\Debug\SFML Template.exe

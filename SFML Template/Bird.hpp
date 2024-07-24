@@ -5,6 +5,8 @@
 #include "DEFINITIONS.hpp"
 #include "Game.hpp"
 
+#include <vector>
+
 namespace Sonar
 {
 	class Bird
@@ -15,10 +17,17 @@ namespace Sonar
 
 		void Draw();
 
+		void Animate(float dt);
+
 	private:
 		GameDataRef _data;
 
 		sf::Sprite _birdSprite;
+		std::vector<sf::Texture> _animationFrames;
+
+		unsigned int _animationIterator;
+
+		sf::Clock _clock;
 
 	};
 }
