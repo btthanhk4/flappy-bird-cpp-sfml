@@ -37,5 +37,7 @@ namespace Sonar
 
 		int _birdState;
 
+		float _rotation;
+
 	};
 }
