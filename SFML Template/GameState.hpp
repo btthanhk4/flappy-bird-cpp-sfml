@@ -7,6 +7,7 @@
 #include "Land.hpp"
 #include "Bird.hpp"
 #include "Collision.hpp"
+#include "Flash.hpp"
 
 namespace Sonar
 {
@@ -30,6 +31,7 @@ namespace Sonar
 		Land* land;
 		Bird* bird;
 		Collision collision;
+		Flash* flash;
 
 		sf::Clock clock;
 
