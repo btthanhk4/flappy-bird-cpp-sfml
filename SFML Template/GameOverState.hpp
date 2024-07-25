@@ -21,5 +21,9 @@ namespace Sonar
 		GameDataRef _data;
 
 		sf::Sprite _background;
+
+		sf::Sprite _gameOverTitle;
+		sf::Sprite _gameOverContainer;
+		sf::Sprite _retryButton;
 	};
 }

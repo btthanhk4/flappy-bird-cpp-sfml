@@ -1,5 +1,4 @@
-﻿  AssetManager.cpp
-  Bird.cpp
+﻿  Bird.cpp
   Flash.cpp
 C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\Flash.cpp(7,94): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
 C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\Flash.cpp(7,94): warning C4244:         with
@@ -23,13 +22,21 @@ C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\Flash.cpp
 C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\Flash.cpp(25,13): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\Flash.cpp(33,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
 C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\Flash.cpp(37,13): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-  Game.cpp
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\Game.cpp(12,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   GameOverState.cpp
+C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\GameOverState.cpp(29,158): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\GameOverState.cpp(29,158): warning C4244:         with
+C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\GameOverState.cpp(29,158): warning C4244:         [
+C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\GameOverState.cpp(29,158): warning C4244:             T=float
+C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\GameOverState.cpp(29,158): warning C4244:         ]
+C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\GameOverState.cpp(30,200): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\GameOverState.cpp(30,200): warning C4244:         with
+C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\GameOverState.cpp(30,200): warning C4244:         [
+C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\GameOverState.cpp(30,200): warning C4244:             T=float
+C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\GameOverState.cpp(30,200): warning C4244:         ]
   GameState.cpp
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\GameState.cpp(93,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\GameState.cpp(103,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\GameState.cpp(115,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\GameState.cpp(94,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\GameState.cpp(106,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\GameState.cpp(120,23): warning C4018: '<': signed/unsigned mismatch
   HUD.cpp
 C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\HUD.cpp(19,96): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
 C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\HUD.cpp(19,96): warning C4244:         with
@@ -59,7 +66,6 @@ C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\Land.cpp(
 C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\Land.cpp(29,50): warning C4244:         [
 C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\Land.cpp(29,50): warning C4244:             T=float
 C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\Land.cpp(29,50): warning C4244:         ]
-  main.cpp
   MainMenuState.cpp
   Pipe.cpp
 C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\Pipe.cpp(18,51): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
@@ -87,5 +93,6 @@ C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\Pipe.cpp(
 C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\Pipe.cpp(53,21): warning C4018: '<': signed/unsigned mismatch
 C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\SFML Template\Pipe.cpp(68,21): warning C4018: '<': signed/unsigned mismatch
   SplashState.cpp
+  main.cpp
   Generating Code...
   SFML Template.vcxproj -> C:\Users\Admin\OneDrive\Desktop\SFML Group\SFML Template\Debug\SFML Template.exe
