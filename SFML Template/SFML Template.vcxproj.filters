@@ -206,4 +206,7 @@
       <Filter>Resources\res</Filter>
     </Image>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Highscore.txt" />
+  </ItemGroup>
 </Project>
