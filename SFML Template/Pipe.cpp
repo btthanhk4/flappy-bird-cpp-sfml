@@ -18,6 +18,7 @@ namespace Sonar
 		sprite.setPosition(this->_data->window.getSize().x, this->_data->window.getSize().y - sprite.getLocalBounds().height - _pipeSpawnYOffset);
 
 		pipeSprites.push_back(sprite);
+
 	}
 
 	void Pipe::SpawnTopPipe()
