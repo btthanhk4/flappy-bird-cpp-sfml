@@ -3,7 +3,7 @@
 #define SCREEN_WIDTH 768
 #define SCREEN_HEIGHT 1024
 
-#define SPLASH_STATE_SHOW_TIME 0.0
+#define SPLASH_STATE_SHOW_TIME 3.0
 
 #define SPLASH_SCENE_BACKGROUND_FILEPATH "Resources/res/Splash Background.png"
 #define MAIN_MENU_BACKGROUND_FILEPATH "Resources/res/sky.png"
@@ -34,6 +34,10 @@
 #define SILVER_MEDAL_FILEPATH "Resources/res/Silver-Medal.png"
 #define GOLD_MEDAL_FILEPATH "Resources/res/Gold-Medal.png"
 #define PLATINUM_MEDAL_FILEPATH "Resources/res/Platinum-Medal.png"
+
+#define HIT_SOUND_FILEPATH "Resources/audio/Hit.wav"
+#define POINT_SOUND_FILEPATH "Resources/audio/Point.wav"
+#define WING_SOUND_FILEPATH "Resources/audio/Wing.wav"
 
 #define PIPE_MOVEMENT_SPEED 200.0f
 #define PIPE_SPAWN_FREQUENCY 1.5f
