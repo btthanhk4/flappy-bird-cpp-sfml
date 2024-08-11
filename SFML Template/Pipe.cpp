@@ -1,4 +1,4 @@
-#include "Pipe.hpp"
+﻿#include "Pipe.hpp"
 #include "DEFINITIONS.hpp"
 
 #include <iostream>
@@ -9,6 +9,8 @@ namespace Sonar
 	{
 		_landHeight = this->_data->assets.GetTexture("Land").getSize().y;
 		_pipeSpawnYOffset = 0;
+
+		pipeMovementSpeed = PIPE_MOVEMENT_SPEED;
 	}
 
 	void Pipe::SpawnBottomPipe()
@@ -50,36 +52,35 @@ namespace Sonar
 
 	void Pipe::MovePipes(float dt)
 	{
-		for (int i = 0; i < pipeSprites.size(); i++)
+		for (unsigned int i = 0; i < pipeSprites.size(); i++)
 		{
-			if (pipeSprites.at(i).getPosition().x < 0 - pipeSprites.at(i).getLocalBounds().width)
+			if (pipeSprites.at(i).getPosition().x < 0 - pipeSprites.at(i).getGlobalBounds().width)
 			{
 				pipeSprites.erase(pipeSprites.begin() + i);
 			}
 			else
 			{
-				sf::Vector2f position = pipeSprites.at(i).getPosition();
-				float movement = PIPE_MOVEMENT_SPEED * dt;
-
+				float movement = pipeMovementSpeed * dt;
 				pipeSprites.at(i).move(-movement, 0);
 			}
 		}
 
-		for (int i = 0; i < scoringPipes.size(); i++)
+		// Cũng cần di chuyển các cột ghi điểm
+		for (unsigned int i = 0; i < scoringPipes.size(); i++)
 		{
-			if (scoringPipes.at(i).getPosition().x < 0 - scoringPipes.at(i).getLocalBounds().width)
+			if (scoringPipes.at(i).getPosition().x < 0 - scoringPipes.at(i).getGlobalBounds().width)
 			{
 				scoringPipes.erase(scoringPipes.begin() + i);
 			}
 			else
 			{
-				sf::Vector2f position = scoringPipes.at(i).getPosition();
-				float movement = PIPE_MOVEMENT_SPEED * dt;
-
+				float movement = pipeMovementSpeed * dt;
 				scoringPipes.at(i).move(-movement, 0);
 			}
 		}
 	}
+
+
 
 	void Pipe::DrawPipes()
 	{

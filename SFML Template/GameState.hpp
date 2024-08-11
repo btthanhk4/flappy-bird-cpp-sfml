@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
@@ -24,6 +24,7 @@ namespace Sonar
 		void HandleInput();
 		void Update(float dt);
 		void Draw(float dt);
+		float pipeMovementSpeed;
 
 	private:
 		GameDataRef _data;
@@ -53,6 +54,9 @@ namespace Sonar
 		sf::Sound _hitSound;
 		sf::Sound _wingSound;
 		sf::Sound _pointSound;
+
+		sf::Sprite doubleScoreItemSprite;
+		sf::Sprite speedUpItemSprite;
 
 	};
 }

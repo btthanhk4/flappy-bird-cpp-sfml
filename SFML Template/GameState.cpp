@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include <sstream>
 #include "DEFINITIONS.hpp"
@@ -45,6 +45,16 @@ namespace Sonar
 		this->_data->assets.LoadTexture("Bird Frame 4", BIRD_FRAME_4_FILEPATH);
 		this->_data->assets.LoadTexture("Scoring Pipe", SCORING_PIPE_FILEPATH);
 		this->_data->assets.LoadFont("Flappy Font", FLAPPY_FONT_FILEPATH);
+		this->_data->assets.LoadTexture("Double Score Item", DOUBLE_SCORE_ITEM_FILEPATH);
+		this->_data->assets.LoadTexture("Speed Up Item", SPEED_UP_ITEM_FILEPATH);
+
+		doubleScoreItemSprite.setTexture(this->_data->assets.GetTexture("Double Score Item"));
+		speedUpItemSprite.setTexture(this->_data->assets.GetTexture("Speed Up Item"));
+
+		doubleScoreItemSprite.setPosition(-100, -100);
+		speedUpItemSprite.setPosition(-100, -100);
+
+        pipeMovementSpeed = PIPE_MOVEMENT_SPEED;
 
 		pipe = new Pipe(_data);
 		land = new Land(_data);
@@ -84,105 +94,166 @@ namespace Sonar
 		}
 	}
 
-	void GameState::Update(float dt)
-	{
-		if (GameStates::eGameOver != _gameState)
-		{
-			bird->Animate(dt);
-			land->MoveLand(dt);
-		}
+    void GameState::Update(float dt)
+    {
+        if (GameStates::eGameOver != _gameState)
+        {
+            bird->Animate(dt);
+            land->MoveLand(dt);
+        }
 
-		if (GameStates::ePlaying == _gameState)
-		{
-			pipe->MovePipes(dt);
+        if (GameStates::ePlaying == _gameState)
+        {
+            pipe->MovePipes(dt);
 
-			if (clock.getElapsedTime().asSeconds() > PIPE_SPAWN_FREQUENCY)
-			{
-				pipe->RandomisePipeOffset();
+            if (clock.getElapsedTime().asSeconds() > PIPE_SPAWN_FREQUENCY)
+            {
+                pipe->RandomisePipeOffset();
 
-				pipe->SpawnInvisiblePipe();
-				pipe->SpawnBottomPipe();
-				pipe->SpawnTopPipe();
-				pipe->SpawnScoringPipe();
+                pipe->SpawnInvisiblePipe();
+                pipe->SpawnBottomPipe();
+                pipe->SpawnTopPipe();
+                pipe->SpawnScoringPipe();
 
-				clock.restart();
-			}
+                clock.restart();
+            }
 
-			bird->Update(dt);
+            bird->Update(dt);
 
-			std::vector<sf::Sprite> landSprites = land->GetSprites();
+            std::vector<sf::Sprite> landSprites = land->GetSprites();
 
-			for (int i = 0; i < landSprites.size(); i++)
-			{
-				if (collision.CheckSpriteCollision(bird->GetSprite(), 0.7f, landSprites.at(i), 1.0f))
-				{
-					_gameState = GameStates::eGameOver;
+            for (int i = 0; i < landSprites.size(); i++)
+            {
+                if (collision.CheckSpriteCollision(bird->GetSprite(), 0.7f, landSprites.at(i), 1.0f))
+                {
+                    _gameState = GameStates::eGameOver;
 
-					clock.restart();
+                    clock.restart();
 
-					_hitSound.play();
-				}
-			}
+                    _hitSound.play();
+                }
+            }
 
-			std::vector<sf::Sprite> pipeSprites = pipe->GetSprites();
+            std::vector<sf::Sprite> pipeSprites = pipe->GetSprites();
 
-			for (int i = 0; i < pipeSprites.size(); i++)
-			{
-				if (collision.CheckSpriteCollision(bird->GetSprite(), 0.625f, pipeSprites.at(i), 1.0f))
-				{
-					_gameState = GameStates::eGameOver;
+            for (int i = 0; i < pipeSprites.size(); i++)
+            {
+                if (collision.CheckSpriteCollision(bird->GetSprite(), 0.625f, pipeSprites.at(i), 1.0f))
+                {
+                    _gameState = GameStates::eGameOver;
 
-					clock.restart();
+                    clock.restart();
 
-					_hitSound.play();
-				}
-			}
+                    _hitSound.play();
+                }
+            }
 
-			if (GameStates::ePlaying == _gameState)
-			{
-				std::vector<sf::Sprite>& scoringSprites = pipe->GetScoringSprites();
+            // Vật phẩm xuất hiện ngẫu nhiên ở giữa màn hình
+            if (std::rand() % 1000 < 5) // Tỷ lệ xuất hiện ngẫu nhiên
+            {
+                doubleScoreItemSprite.setPosition(SCREEN_WIDTH, std::rand() % (SCREEN_HEIGHT / 2) + (SCREEN_HEIGHT / 4));
+            }
 
-				for (int i = 0; i < scoringSprites.size(); i++)
-				{
-					if (collision.CheckSpriteCollision(bird->GetSprite(), 0.625f, scoringSprites.at(i), 1.0f))
-					{
-						_score++;
+            if (std::rand() % 1000 < 5) // Tỷ lệ xuất hiện ngẫu nhiên
+            {
+                speedUpItemSprite.setPosition(SCREEN_WIDTH, std::rand() % (SCREEN_HEIGHT / 2) + (SCREEN_HEIGHT / 4));
+            }
 
-						hud->UpdateScore(_score);
+            // Di chuyển vật phẩm nếu chúng xuất hiện trên màn hình
+            if (doubleScoreItemSprite.getPosition().x >= 0)
+            {
+                doubleScoreItemSprite.move(-PIPE_MOVEMENT_SPEED * dt, 0);
+            }
 
-						scoringSprites.erase(scoringSprites.begin() + i);
+            if (speedUpItemSprite.getPosition().x >= 0)
+            {
+                speedUpItemSprite.move(-PIPE_MOVEMENT_SPEED * dt, 0);
+            }
 
-						_pointSound.play();
-					}
-				}
-			}
-		}
+            // Kiểm tra va chạm với vật phẩm tăng điểm
+            if (collision.CheckSpriteCollision(bird->GetSprite(), 0.7f, doubleScoreItemSprite, 1.0f))
+            {
+                _score *= 2;  // Nhân đôi điểm
+                hud->UpdateScore(_score);
+                doubleScoreItemSprite.setPosition(-100, -100);  // Ẩn vật phẩm sau khi ăn
+            }
 
-		if (GameStates::eGameOver == _gameState)
-		{
-			flash->Show(dt);
+            // Kiểm tra va chạm với vật phẩm tăng tốc độ
+            if (collision.CheckSpriteCollision(bird->GetSprite(), 0.7f, speedUpItemSprite, 1.0f))
+            {
+                pipe->pipeMovementSpeed *= 1.5f;  // Tăng tốc độ của trò chơi
+                speedUpItemSprite.setPosition(-100, -100);  // Ẩn vật phẩm sau khi ăn
+            }
 
-			if (clock.getElapsedTime().asSeconds() > TIME_BEFORE_GAME_OVER_APPEARS)
-			{
-				this->_data->machine.AddState(StateRef(new GameOverState(_data, _score)), true);
-			}
-		}
-	}
+            // Kiểm tra nếu vật phẩm đi qua màn hình mà không bị ăn
+            if (doubleScoreItemSprite.getPosition().x + doubleScoreItemSprite.getGlobalBounds().width < 0)
+            {
+                doubleScoreItemSprite.setPosition(-100, -100);  // Ẩn vật phẩm
+            }
 
-	void GameState::Draw(float dt)
-	{
-		this->_data->window.clear(sf::Color::Red);
+            if (speedUpItemSprite.getPosition().x + speedUpItemSprite.getGlobalBounds().width < 0)
+            {
+                speedUpItemSprite.setPosition(-100, -100);  // Ẩn vật phẩm
+            }
 
-		this->_data->window.draw(this->_background);
+            if (GameStates::ePlaying == _gameState)
+            {
+                std::vector<sf::Sprite>& scoringSprites = pipe->GetScoringSprites();
 
-		pipe->DrawPipes();
-		land->DrawLand();
-		bird->Draw();
+                for (int i = 0; i < scoringSprites.size(); i++)
+                {
+                    if (collision.CheckSpriteCollision(bird->GetSprite(), 0.625f, scoringSprites.at(i), 1.0f))
+                    {
+                        _score++;
 
-		flash->Draw();
+                        hud->UpdateScore(_score);
 
-		hud->Draw();
+                        scoringSprites.erase(scoringSprites.begin() + i);
 
-		this->_data->window.display();
-	}
+                        _pointSound.play();
+                    }
+                }
+            }
+        }
+
+        if (GameStates::eGameOver == _gameState)
+        {
+            flash->Show(dt);
+
+            if (clock.getElapsedTime().asSeconds() > TIME_BEFORE_GAME_OVER_APPEARS)
+            {
+                this->_data->machine.AddState(StateRef(new GameOverState(_data, _score)), true);
+            }
+        }
+    }
+
+
+
+    void GameState::Draw(float dt)
+    {
+        // Xóa màn hình với màu nền
+        this->_data->window.clear(sf::Color::Red);
+
+        // Vẽ hình nền
+        this->_data->window.draw(this->_background);
+
+        // Vẽ các đối tượng trò chơi khác
+        pipe->DrawPipes();
+        land->DrawLand();
+        bird->Draw();
+
+        // Vẽ hai vật phẩm nếu chúng xuất hiện trên màn hình
+        this->_data->window.draw(doubleScoreItemSprite);
+        this->_data->window.draw(speedUpItemSprite);
+
+        // Vẽ hiệu ứng flash
+        flash->Draw();
+
+        // Vẽ HUD (điểm số, v.v.)
+        hud->Draw();
+
+        // Hiển thị các nội dung đã vẽ lên màn hình
+        this->_data->window.display();
+    }
+
 }

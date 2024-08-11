@@ -187,10 +187,12 @@
     <Image Include="Resources\res\bird-03.png" />
     <Image Include="Resources\res\bird-04.png" />
     <Image Include="Resources\res\Bronze-Medal.png" />
+    <Image Include="Resources\res\DoubleScore.png" />
     <Image Include="Resources\res\Game-Over-Body.png" />
     <Image Include="Resources\res\Game-Over-Title.png" />
     <Image Include="Resources\res\Gold-Medal.png" />
     <Image Include="Resources\res\InvisibleScoringPipe.png" />
+    <Image Include="Resources\res\Khien.png" />
     <Image Include="Resources\res\land.png" />
     <Image Include="Resources\res\PipeDown.png" />
     <Image Include="Resources\res\PipeUp.png" />
@@ -198,6 +200,7 @@
     <Image Include="Resources\res\PlayButton.png" />
     <Image Include="Resources\res\Silver-Medal.png" />
     <Image Include="Resources\res\sky.png" />
+    <Image Include="Resources\res\SpeedUp.png" />
     <Image Include="Resources\res\Splash Background.png" />
     <Image Include="Resources\res\title.png" />
   </ItemGroup>

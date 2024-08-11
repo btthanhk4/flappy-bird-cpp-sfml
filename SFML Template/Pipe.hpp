@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include <SFML/Graphics.hpp>
 #include "Game.hpp"
@@ -18,6 +18,7 @@ namespace Sonar
 		void MovePipes(float dt);
 		void DrawPipes();
 		void RandomisePipeOffset();
+		float pipeMovementSpeed;
 
 		const std::vector<sf::Sprite>& GetSprites() const;
 		std::vector<sf::Sprite>& GetScoringSprites();

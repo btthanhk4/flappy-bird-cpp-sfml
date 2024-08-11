@@ -3,7 +3,7 @@
 #define SCREEN_WIDTH 768
 #define SCREEN_HEIGHT 1024
 
-#define SPLASH_STATE_SHOW_TIME 3.0
+#define SPLASH_STATE_SHOW_TIME 0.0
 
 #define SPLASH_SCENE_BACKGROUND_FILEPATH "Resources/res/Splash Background.png"
 #define MAIN_MENU_BACKGROUND_FILEPATH "Resources/res/sky.png"
@@ -70,3 +70,6 @@ enum GameStates
 #define SILVER_MEDAL_SCORE 5
 #define GOLD_MEDAL_SCORE 25
 #define PLATINUM_MEDAL_SCORE 100
+
+#define DOUBLE_SCORE_ITEM_FILEPATH "Resources/res/DoubleScore.png"
+#define SPEED_UP_ITEM_FILEPATH "Resources/res/SpeedUp.png"
