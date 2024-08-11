@@ -55,6 +55,8 @@ namespace Sonar
 		speedUpItemSprite.setPosition(-100, -100);
 
         pipeMovementSpeed = PIPE_MOVEMENT_SPEED;
+        pipeSpawnFrequency = PIPE_SPAWN_FREQUENCY;
+
 
 		pipe = new Pipe(_data);
 		land = new Land(_data);
@@ -106,7 +108,7 @@ namespace Sonar
         {
             pipe->MovePipes(dt);
 
-            if (clock.getElapsedTime().asSeconds() > PIPE_SPAWN_FREQUENCY)
+            if (clock.getElapsedTime().asSeconds() > pipeSpawnFrequency)
             {
                 pipe->RandomisePipeOffset();
 
@@ -119,6 +121,7 @@ namespace Sonar
             }
 
             bird->Update(dt);
+
 
             std::vector<sf::Sprite> landSprites = land->GetSprites();
 
@@ -148,6 +151,32 @@ namespace Sonar
                 }
             }
 
+            // Kiểm tra và chuyển giữa các chế độ
+            if (_score > 140)
+            {
+                // Chuyển lại bản đồ máu
+                ActivateLightMode();
+                darkModeActivated = false;
+            }
+            else if (_score > 105 && _score < 140 && !darkModeActivated)
+            {
+                // Chuyển sang bản đồ tối
+                ActivateDarkMode();
+                darkModeActivated = true;
+            }
+            else if (_score > 70 && _score < 105)
+            {
+                // Chuyển lại bản đồ sáng
+                ActivateLightMode();
+                darkModeActivated = false;
+            }
+            else if (_score > 35 && !darkModeActivated)
+            {
+                // Chuyển sang bản đồ tối
+                ActivateDarkMode();
+                darkModeActivated = true;
+            }
+
             // Vật phẩm xuất hiện ngẫu nhiên ở giữa màn hình
             if (std::rand() % 1000 < 5) // Tỷ lệ xuất hiện ngẫu nhiên
             {
@@ -173,7 +202,7 @@ namespace Sonar
             // Kiểm tra va chạm với vật phẩm tăng điểm
             if (collision.CheckSpriteCollision(bird->GetSprite(), 0.7f, doubleScoreItemSprite, 1.0f))
             {
-                _score *= 2;  // Nhân đôi điểm
+                _score += 5;  // Cộng 5 điểm
                 hud->UpdateScore(_score);
                 doubleScoreItemSprite.setPosition(-100, -100);  // Ẩn vật phẩm sau khi ăn
             }
@@ -181,9 +210,11 @@ namespace Sonar
             // Kiểm tra va chạm với vật phẩm tăng tốc độ
             if (collision.CheckSpriteCollision(bird->GetSprite(), 0.7f, speedUpItemSprite, 1.0f))
             {
-                pipe->pipeMovementSpeed *= 1.5f;  // Tăng tốc độ của trò chơi
+                pipe->pipeMovementSpeed *= 1.5f;  // Tăng tốc độ của cột
+                pipeSpawnFrequency /= 1.4f;  // Giảm thời gian giữa các lần xuất hiện cột
                 speedUpItemSprite.setPosition(-100, -100);  // Ẩn vật phẩm sau khi ăn
             }
+
 
             // Kiểm tra nếu vật phẩm đi qua màn hình mà không bị ăn
             if (doubleScoreItemSprite.getPosition().x + doubleScoreItemSprite.getGlobalBounds().width < 0)
@@ -255,5 +286,21 @@ namespace Sonar
         // Hiển thị các nội dung đã vẽ lên màn hình
         this->_data->window.display();
     }
+
+
+    void GameState::ActivateDarkMode()
+    {
+        // Thay đổi hình nền sang bản đồ tối
+        this->_data->assets.LoadTexture("Game Background", DARK_BACKGROUND_FILEPATH);
+        _background.setTexture(this->_data->assets.GetTexture("Game Background"));
+    }
+
+    void GameState::ActivateLightMode()
+    {
+        // Thay đổi hình nền sang bản đồ sáng
+        this->_data->assets.LoadTexture("Game Background", GAME_BACKGROUND_FILEPATH);
+        _background.setTexture(this->_data->assets.GetTexture("Game Background"));
+    }
+
 
 }

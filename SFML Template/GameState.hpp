@@ -25,6 +25,7 @@ namespace Sonar
 		void Update(float dt);
 		void Draw(float dt);
 		float pipeMovementSpeed;
+		float pipeSpawnFrequency;
 
 	private:
 		GameDataRef _data;
@@ -57,6 +58,10 @@ namespace Sonar
 
 		sf::Sprite doubleScoreItemSprite;
 		sf::Sprite speedUpItemSprite;
+
+		void ActivateDarkMode();
+		void ActivateLightMode();
+		bool darkModeActivated = false;
 
 	};
 }

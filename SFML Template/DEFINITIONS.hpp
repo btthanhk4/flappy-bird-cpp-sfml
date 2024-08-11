@@ -10,6 +10,11 @@
 #define GAME_BACKGROUND_FILEPATH "Resources/res/sky.png"
 #define GAME_OVER_BACKGROUND_FILEPATH "Resources/res/sky.png"
 
+#define DARK_BACKGROUND_FILEPATH "Resources/res/DarkSky.png"
+#define DARK_PIPE_UP_FILEPATH "Resources/res/PipeUp.png"
+#define DARK_PIPE_DOWN_FILEPATH "Resources/res/PipeDown.png"
+#define DARK_LAND_FILEPATH "Resources/res/land.png"
+
 #define GAME_TITLE_FILEPATH "Resources/res/title.png"
 #define PLAY_BUTTON_FILEPATH "Resources/res/PlayButton.png"
 
