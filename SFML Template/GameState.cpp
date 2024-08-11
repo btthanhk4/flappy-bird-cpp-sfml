@@ -211,7 +211,7 @@ namespace Sonar
             if (collision.CheckSpriteCollision(bird->GetSprite(), 0.7f, speedUpItemSprite, 1.0f))
             {
                 pipe->pipeMovementSpeed *= 1.5f;  // Tăng tốc độ của cột
-                pipeSpawnFrequency /= 1.4f;  // Giảm thời gian giữa các lần xuất hiện cột
+                pipeSpawnFrequency /= 1.55f;  // Giảm thời gian giữa các lần xuất hiện cột
                 speedUpItemSprite.setPosition(-100, -100);  // Ẩn vật phẩm sau khi ăn
             }
 
