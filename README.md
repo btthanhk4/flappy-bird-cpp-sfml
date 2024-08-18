@@ -94,12 +94,14 @@ Flappy Bird là một game thuộc thể loại endless runner. Người chơi �
 
   - **Khiên chắn**: Cho phép bạn tránh được một quả bom mà không mất điểm.
     <div style="text-align: center;">
-      <img src="https://github.com/user-attachments/assets/shield.png" alt="Shield" width="150">
+      <img src="![shield](https://github.com/user-attachments/assets/b4762931-c960-4ab1-9c42-88c8df82c5d2)
+" alt="Shield" width="150">
     </div>
 
   - **Bom**: Giảm điểm số của bạn nếu không có khiên chắn.
     <div style="text-align: center;">
-      <img src="https://github.com/user-attachments/assets/boom.png" alt="Boom" width="150">
+      <img src="![bomb](https://github.com/user-attachments/assets/f87b5d05-43e7-41b4-9b7c-be54133621d8)
+" alt="Boom" width="150">
     </div>
 
 ---
