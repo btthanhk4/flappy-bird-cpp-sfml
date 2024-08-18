@@ -37,7 +37,7 @@ Flappy Bird là một game thuộc thể loại endless runner. Người chơi �
 
 1. Tải project bản zip về máy:
    <div style="text-align: center;">
-     <img src="https://github.com/user-attachments/assets/fb59a041-97e1-486b-9d8a-ebad40a22d8d" alt="download" width="150">
+     <img src="https://github.com/user-attachments/assets/fb59a041-97e1-486b-9d8a-ebad40a22d8d" alt="download" width="300">
    </div>
 
 2. Cài đặt môi trường phát triển bao gồm các công cụ như gcc/g++, và thư viện SFML.
