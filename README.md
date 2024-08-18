@@ -8,9 +8,6 @@
 
 **Link video trải nghiệm:** [https://youtu.be/6bHyoTrF6y0](https://youtu.be/6bHyoTrF6y0)
 
-Flappy Bird phiên bản mới mang đến cho người chơi một trải nghiệm độc đáo với nhiều cải tiến đặc biệt. Trò chơi bao gồm khả năng chuyển đổi tự động giữa các bản đồ sáng và tối khi đạt đến những điểm mốc nhất định, tạo ra sự mới mẻ và thách thức liên tục. Bên cạnh đó, người chơi sẽ gặp các vật phẩm xuất hiện ngẫu nhiên, giúp thay đổi tốc độ, tăng điểm số và cung cấp khả năng phòng thủ với các khiên bảo vệ. Những yếu tố này không chỉ tăng thêm phần hấp dẫn cho trò chơi mà còn đòi hỏi người chơi phải thích ứng nhanh chóng để đạt được điểm số cao nhất.
----
-
 ## **Mục lục**
 - [Giới thiệu game](#giới-thiệu-game)
 - [Cách tải game](#cách-tải-game)
