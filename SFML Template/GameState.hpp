@@ -58,10 +58,39 @@ namespace Sonar
 
 		sf::Sprite doubleScoreItemSprite;
 		sf::Sprite speedUpItemSprite;
+		sf::Sprite boomItemSprite;
+		sf::Sprite shieldItemSprite;
+		sf::Sprite nextTrackButton;
+		sf::Sprite prevTrackButton;
+		sf::Sprite stopMusicButton;
+
 
 		void ActivateDarkMode();
 		void ActivateLightMode();
 		bool darkModeActivated = false;
+		bool flag = false;
+
+		// Các biến liên quan đến âm nhạc
+		sf::Music backgroundMusic;
+		std::vector<std::string> musicFiles;
+		int currentTrack;
+
+		bool musicPlaying;
+
+		void NextTrack();
+		void PrevTrack();
+		void StopMusic();
+		void PlayMusic();
+
+		bool hasDoubleScore = false;
+		bool hasSpeedUp = false;
+		bool hasBoom = false;
+		bool hasShield = false;
+
+		float itemDisplayTime = 5.0f;  // Thời gian hiển thị vật phẩm trên màn hình
+		sf::Clock itemClock;
+		int shieldCount; // Đếm số lượng khiên đã ăn được
+
 
 	};
 }

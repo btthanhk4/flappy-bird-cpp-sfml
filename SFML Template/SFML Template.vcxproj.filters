@@ -205,9 +205,6 @@
     <Image Include="Resources\res\Splash Background.png">
       <Filter>Resources\res</Filter>
     </Image>
-    <Image Include="Resources\res\Khien.png">
-      <Filter>Resources\res</Filter>
-    </Image>
     <Image Include="Resources\res\DoubleScore.png">
       <Filter>Resources\res</Filter>
     </Image>

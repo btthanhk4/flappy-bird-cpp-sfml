@@ -3,7 +3,10 @@
 #define SCREEN_WIDTH 768
 #define SCREEN_HEIGHT 1024
 
-#define SPLASH_STATE_SHOW_TIME 0.0
+#define SPLASH_STATE_SHOW_TIME 3.0
+
+#define BOOM_FILEPATH "Resources/res/bomb.png"
+#define SHIELD_FILEPATH "Resources/res/shield.png"
 
 #define SPLASH_SCENE_BACKGROUND_FILEPATH "Resources/res/Splash Background.png"
 #define MAIN_MENU_BACKGROUND_FILEPATH "Resources/res/sky.png"
@@ -78,3 +81,8 @@ enum GameStates
 
 #define DOUBLE_SCORE_ITEM_FILEPATH "Resources/res/DoubleScore.png"
 #define SPEED_UP_ITEM_FILEPATH "Resources/res/SpeedUp.png"
+
+#define NEXT_TRACK_BUTTON_FILEPATH "Resources/res/next_track.png"
+#define PREV_TRACK_BUTTON_FILEPATH "Resources/res/prev_track.png"
+#define STOP_MUSIC_BUTTON_FILEPATH "Resources/res/play_music.png"
+#define PLAY_MUSIC_BUTTON_FILEPATH "Resources/res/stop_music.png"

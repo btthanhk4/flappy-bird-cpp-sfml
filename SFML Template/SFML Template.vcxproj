@@ -192,7 +192,6 @@
     <Image Include="Resources\res\Game-Over-Title.png" />
     <Image Include="Resources\res\Gold-Medal.png" />
     <Image Include="Resources\res\InvisibleScoringPipe.png" />
-    <Image Include="Resources\res\Khien.png" />
     <Image Include="Resources\res\land.png" />
     <Image Include="Resources\res\PipeDown.png" />
     <Image Include="Resources\res\PipeUp.png" />
