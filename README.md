@@ -203,7 +203,7 @@ Flappy Bird là một game thuộc thể loại endless runner. Người chơi �
 
 Game Flappy Bird phiên bản này được phát triển dựa trên ý tưởng từ trò chơi gốc Flappy Bird với những cải tiến độc đáo. Quá trình phát triển game đã tham khảo và áp dụng các kiến thức từ nhiều nguồn tài liệu và công cụ sau:
 
-- **Tham khảo mã nguồn và cấu trúc dự án**: Hướng dẫn từ Lazy Foo và tài liệu của SFML, tham khảo logic game từ video trên youtube: [Youtube](https://www.youtube.com/watch?v=elV-DqaYWZo&list=PLRtjMdoYXLf7DB3--POF9lYzaZu0poT5V&index=7)
+- **Tham khảo mã nguồn và cấu trúc dự án**: Hướng dẫn từ LazyFoo và tài liệu của SFML, tham khảo logic game từ video trên youtube
 - **Tài nguyên đồ họa và âm thanh**: Các hình ảnh được lấy từ  itch.io, âm thanh sưu tầm từ nhiều nguồn.
 
 ---
