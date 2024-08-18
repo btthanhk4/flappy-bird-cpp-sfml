@@ -32,13 +32,7 @@ Flappy Bird là một game thuộc thể loại endless runner. Người chơi �
 ---
 
 ## **Cách tải game**
-
-### **Cách 1: Không bao gồm code.**
-
-1. Tải game tại link sau: [Link tải game](https://github.com/YourRepo/FlappyBird/releases/tag/published)
-2. Giải nén game vào một thư mục và chạy flappybird.exe để chơi.
-
-### **Cách 2: Bao gồm code và có thể biên dịch.**
+### **Bao gồm code và có thể biên dịch.**
 
 1. Clone repo này về máy: `git clone https://github.com/YourRepo/FlappyBird.git`
 2. Cài đặt môi trường phát triển bao gồm các công cụ như gcc/g++, và thư viện SFML.
@@ -100,6 +94,10 @@ Flappy Bird là một game thuộc thể loại endless runner. Người chơi �
   - **Bom**: Giảm điểm số của bạn nếu không có khiên chắn.
     <div style="text-align: center;">
       <img src="https://github.com/user-attachments/assets/f87b5d05-43e7-41b4-9b7c-be54133621d8" alt="Boom" width="150">
+    </div>
+  - **Phần âm nhạc và thu thập vật phẩm khiên**: Bạn có thể vừa nghe nhạc vừa chơi game, rất thú vị phải không. Bên cạnh đó còn hiển thị số lượng khiên chắn bạn đang có
+<div style="text-align: center;">
+      <img src="https://github.com/user-attachments/assets/2ddf5391-4bd9-4a6d-8324-4928af68ad22" alt="Music" width="150">
     </div>
 
 ---
