@@ -51,7 +51,7 @@ Flappy Bird là một game thuộc thể loại endless runner. Người chơi �
 2. Click vào nút “START” để bắt đầu chơi.
 
    <div style="text-align: center;">
-     <img src="https://github.com/user-attachments/assets/0c6ab891-f448-4375-86ab-3b18c4b6e7b0" alt="start" width="300">
+     <img src="https://github.com/user-attachments/assets/0c6ab891-f448-4375-86ab-3b18c4b6e7b0" alt="start" width="500">
    </div>
 
 3. Khi vào game, nhấn phím hoặc click chuột để điều khiển chú chim.
