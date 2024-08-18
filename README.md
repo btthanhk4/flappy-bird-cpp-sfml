@@ -1,107 +1,152 @@
-[[English]](README_en.md)
+## Giáo viên hướng dẫn: TS. Lê Đức Trọng
 
-# Flappy Bird - Thanh Edition
+## Sinh viên: Bùi Tiến Thành - 22027547
 
-- Trải nghiệm game: 
-- Phá đảo game: 
+---
 
-# Giới thiệu game
+### **Trải nghiệm game:**
+Flappy Bird mang đến một trải nghiệm hoàn toàn mới với những cải tiến đặc biệt, bao gồm việc chuyển đổi giữa các bản đồ sáng và tối, sự xuất hiện ngẫu nhiên của các vật phẩm đặc biệt giúp thay đổi tốc độ, điểm số và khả năng phòng thủ của người chơi.
 
-Flappy Bird là một game thuộc thể loại endless runner. Người chơi điều khiển chú chim bay qua các chướng ngại vật để ghi điểm cao nhất có thể. Hãy cố gắng giữ chú chim bay càng lâu càng tốt mà không va chạm vào ống.
+---
 
-- [0. Cách tải game](#0-cách-tải-game)
-    * [a. Cách 1: Không bao gồm code.](#a-cách-1-không-bao-gồm-code)
-    * [b. Cách 2: Bao gồm code và có thể biên dịch.](#b-cách-2-bao-gồm-code-và-có-thể-biên-dịch)
-- [1. Bắt đầu game](#1-bắt-đầu-game)
-- [2. Chọn level](#2-chọn-level)
-- [3. Các thành phần trong game](#3-các-thành-phần-trong-game)
-- [4. Cách chơi](#4-cách-chơi)
-    * [a. Cách điều khiển](#a-cách-điều-khiển)
-    * [b. Các loại chướng ngại vật](#b-các-loại-chướng-ngại-vật)
-- [5. Chiến thắng và thất bại](#5-chiến-thắng-và-thất-bại)
-- [Về đồ họa của game](#về-đồ-họa-của-game)
+## **Mục lục:**
+- [Giới thiệu game](#giới-thiệu-game)
+- [Cách tải game](#cách-tải-game)
+  - [Cách 1: Không bao gồm code](#cách-1-không-bao-gồm-code)
+  - [Cách 2: Bao gồm code và có thể biên dịch](#cách-2-bao-gồm-code-và-có-thể-biên-dịch)
+- [Bắt đầu game](#bắt-đầu-game)
+- [Các thành phần trong game](#các-thành-phần-trong-game)
+- [Cách chơi](#cách-chơi)
+  - [Cách điều khiển](#cách-điều-khiển)
+  - [Các loại chướng ngại vật](#các-loại-chướng-ngại-vật)
+  - [Điều thú vị của game](#điều-thú-vị-của-game)
+- [Chiến thắng và thất bại](#chiến-thắng-và-thất-bại)
 - [Về source code game](#về-source-code-game)
 
-# 0. Cách tải game
+---
 
-## a. Cách 1: Không bao gồm code.
+## **Giới thiệu game**
 
-Tải game (được nén thành .zip) tại link sau: [Link tải game](https://github.com/YourRepo/FlappyBird/releases/tag/published) <br/>
-Giải nén game vào một thư mục và bật flappybird.exe lên và chơi.
+Flappy Bird là một game thuộc thể loại endless runner. Người chơi điều khiển chú chim bay qua các chướng ngại vật để ghi điểm cao nhất có thể. Game đã được cải tiến với nhiều tính năng đặc biệt như chuyển đổi giữa các bản đồ sáng và tối, xuất hiện các vật phẩm ngẫu nhiên giúp tăng điểm, tăng tốc độ hoặc cung cấp khiên chắn để né tránh chướng ngại vật.
 
-## b. Cách 2: Bao gồm code và có thể biên dịch.
+---
 
-**Bước 1:** Clone repo này về: `git clone https://github.com/YourRepo/FlappyBird.git` hoặc chọn Code -> Download Zip.
+## **Cách tải game**
 
-**Bước 2:** Cài đặt môi trường phát triển, bao gồm các công cụ như gcc/g++, make.
+### **Cách 1: Không bao gồm code.**
 
-**Bước 3:** Mở terminal trong thư mục chứa Makefile và gõ lệnh `make`.
+1. Tải game tại link sau: [Link tải game](https://github.com/YourRepo/FlappyBird/releases/tag/published)
+2. Giải nén game vào một thư mục và chạy flappybird.exe để chơi.
 
-**Bước 4:** Bật flappybird.exe và chơi.
+### **Cách 2: Bao gồm code và có thể biên dịch.**
 
-# 1. Bắt đầu game
+1. Clone repo này về máy: `git clone https://github.com/YourRepo/FlappyBird.git`
+2. Cài đặt môi trường phát triển bao gồm các công cụ như gcc/g++, và thư viện SFML.
+3. Mở dự án bằng Visual Studio 2022 rồi build và chạy dự án.
 
-Chờ một chút rồi click vào nút “START” để bắt đầu chơi game.
+---
+
+## **Bắt đầu game**
+
+1. Chạy trò chơi và chờ đến màn hình chính.
+2. Click vào nút “START” để bắt đầu chơi.
+
 <div style="text-align: center;">
-
-![start](resources/start_screen.png)
-
+  <img src="https://github.com/user-attachments/assets/0c6ab891-f448-4375-86ab-3b18c4b6e7b0" alt="start" width="300">
 </div>
 
-Khi vào game lần đầu, người chơi hãy nhấn phím hoặc click chuột để bắt đầu.
+3. Khi vào game, nhấn phím hoặc click chuột để điều khiển chú chim.
 
 <div style="text-align: center;">
-
-![game](resources/game_screen.png)
-
-</div>
-
-# 2. Chọn level
-
-Game này không có các level truyền thống mà bạn sẽ chơi liên tục để ghi điểm cao nhất.
-
-# 3. Các thành phần trong game:
-
-- **Chim**: Đây là nhân vật chính mà bạn sẽ điều khiển.
-- **Ống**: Các chướng ngại vật mà bạn cần tránh.
-- **Điểm số**: Hiển thị số điểm bạn đạt được.
-
-<div style="text-align: center;">
-
-![components](resources/components.png)
-
-</div>
-
-# 4. Cách chơi
-
-Điều khiển chú chim bay qua các ống mà không va chạm vào chúng.
-
-## a. Cách điều khiển
-
-Nhấn phím hoặc click chuột để làm chú chim bay lên. Nếu không nhấn, chú chim sẽ rơi xuống.
-
-## b. Các loại chướng ngại vật
-
-Các chướng ngại vật chính là các ống xanh. Khoảng cách giữa các ống sẽ thay đổi ngẫu nhiên để tăng độ khó.
-
-# 5. Chiến thắng và thất bại
-
-- Bạn sẽ tiếp tục chơi cho đến khi chú chim va chạm vào ống hoặc rơi xuống đất.
-
-<div style="text-align: center;">
-
-![gameover](resources/gameover.png)
-
+  <img src="https://github.com/user-attachments/assets/d35c9a98-58ba-4874-8e55-4a9765669120" alt="game" width="300">
 </div>
 
 ---
 
-### Về đồ họa của game:
+## **Các thành phần trong game:**
 
-[[Cách làm hiệu ứng trong game]](about_graphics.md)
+- **Chim**: Nhân vật chính mà bạn sẽ điều khiển.
+  <div style="text-align: center;">
+    <img src="https://github.com/user-attachments/assets/9cd9fb46-ab82-4fff-ac2e-38b4954d1f24" alt="bird" width="150">
+  </div>
 
-### Về source code game:
+- **Ống**: Chướng ngại vật bạn cần tránh.
+  <div style="text-align: center;">
+    <img src="https://github.com/user-attachments/assets/e929b92f-6a27-4393-b951-d19e0dce0cb8" alt="PipeUp" width="150" style="margin-right: 20px;">
+    <img src="https://github.com/user-attachments/assets/f391f031-45a8-4841-a216-349cf11a0ffc" alt="PipeDown" width="150" style="margin-left: 20px;">
+  </div>
 
-- **Folder src**: Chứa tất cả các mã nguồn của game.
-- **Folder resources**: Chứa các tài nguyên như hình ảnh, âm thanh.
-- **game.cpp**: Hàm main() của trò chơi.
+- **Điểm số**: Hiển thị điểm của bạn.
+  <div style="text-align: center;">
+    <img src="https://github.com/user-attachments/assets/f1fcbbd0-7265-4a6a-93c4-988ab66647cb" alt="score" width="150">
+  </div>
+
+- **Vật phẩm đặc biệt**:
+  - **Vật phẩm tăng điểm**: Khi ăn, điểm của bạn sẽ được cộng thêm 5 điểm.
+    <div style="text-align: center;">
+      <img src="https://github.com/user-attachments/assets/a06162cb-fcd8-4904-ac39-1c80ac1fb8e4" alt="DoubleScore" width="150">
+    </div>
+  
+  - **Vật phẩm tăng tốc độ**: Khi ăn, tốc độ di chuyển của các cột sẽ tăng lên, đồng thời khoảng cách giữa các cột sẽ bị rút ngắn.
+    <div style="text-align: center;">
+      <img src="https://github.com/user-attachments/assets/f72f172b-79a9-4efb-a65d-db18b0f71862" alt="SpeedUp" width="150">
+    </div>
+
+  - **Khiên chắn**: Cho phép bạn tránh được một quả bom mà không mất điểm.
+    <div style="text-align: center;">
+      <img src="https://github.com/user-attachments/assets/shield.png" alt="Shield" width="150">
+    </div>
+
+  - **Bom**: Giảm điểm số của bạn nếu không có khiên chắn.
+    <div style="text-align: center;">
+      <img src="https://github.com/user-attachments/assets/boom.png" alt="Boom" width="150">
+    </div>
+
+---
+
+## **Cách chơi**
+
+Điều khiển chú chim bay qua các ống mà không va chạm vào chúng, đồng thời ăn các vật phẩm để tăng điểm hoặc tăng tốc độ. Khi ăn khiên, bạn sẽ có khả năng tránh được một quả bom mà không bị mất điểm.
+
+### **Cách điều khiển**
+
+- Nhấn phím hoặc click chuột để làm chú chim bay lên.
+- Nếu không nhấn, chú chim sẽ rơi xuống và bạn sẽ thua.
+
+### **Các loại chướng ngại vật**
+
+- Các ống xanh là các chướng ngại vật chính.
+- Khoảng cách giữa các ống thay đổi ngẫu nhiên để tăng độ khó.
+
+### **Điều thú vị của game**
+
+- Khi bạn đạt điểm mốc nhất định, game sẽ tự động chuyển đổi giữa các bản đồ sáng và tối.
+  
+  **Map ban ngày:**
+  <div style="text-align: center;">
+    <img src="https://github.com/user-attachments/assets/39c8ddba-fffd-4187-b244-a2ad3e6e559b" alt="day_map" width="300">
+  </div>
+
+  **Map ban đêm:**
+  <div style="text-align: center;">
+    <img src="https://github.com/user-attachments/assets/aa113059-912b-46f6-88a7-cf9b26db25f8" alt="night_map" width="300">
+  </div>
+
+---
+
+## **Chiến thắng và thất bại**
+
+- **Chiến thắng**: Nếu bạn có thể đạt được 100000 điểm, bạn sẽ nhận được phần quà bí ẩn.
+- **Thất bại**: Nếu chú chim va chạm vào ống hoặc rơi xuống đất, bạn sẽ thua cuộc và nhận được thông báo "Game Over". Bạn có thể chơi lại để cải thiện điểm số.
+
+  <div style="text-align: center;">
+    <img src="https://github.com/user-attachments/assets/f1fcbbd0-7265-4a6a-93c4-988ab66647cb" alt="game_over" width="300">
+  </div>
+
+---
+
+## **Về source code game**
+
+- **SFML Template**: Chứa mã nguồn của trò chơi.
+- **Resources**: Chứa các tài nguyên như hình ảnh, âm thanh.
+- **main.cpp**: Hàm `main()` của trò chơi.
