@@ -143,9 +143,7 @@ Flappy Bird là một game thuộc thể loại endless runner. Người chơi �
     <img src="https://github.com/user-attachments/assets/39c8ddba-fffd-4187-b244-a2ad3e6e559b" alt="day_map" width="300">
   </div>
 
-  **Map
-
- ban đêm:**
+  **Map ban đêm:**
   <div style="text-align: center;">
     <img src="https://github.com/user-attachments/assets/aa113059-912b-46f6-88a7-cf9b26db25f8" alt="night_map" width="300">
   </div>
