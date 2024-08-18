@@ -149,8 +149,55 @@ Flappy Bird là một game thuộc thể loại endless runner. Người chơi �
 
 ---
 
-## **Về source code game**
+## **Về source code game:**
 
-- **SFML Template**: Chứa mã nguồn của trò chơi.
-- **Resources**: Chứa các tài nguyên như hình ảnh, âm thanh.
-- **main.cpp**: Hàm `main()` của trò chơi.
+### **Folder `assets`:**
+- **Chứa các tài nguyên game**:
+  - Hình ảnh: Bao gồm các hình ảnh của chú chim, ống, nền, vật phẩm đặc biệt, và các nút điều khiển.
+  - Âm thanh: Chứa các tệp âm thanh như nhạc nền, âm thanh va chạm, âm thanh cánh vỗ, và âm thanh tính điểm.
+  - Phông chữ: Chứa phông chữ sử dụng trong game, ví dụ như phông chữ cho HUD (Heads-Up Display).
+
+### **Folder `src`:**
+- **Chứa mã nguồn của trò chơi**:
+  - **`Game.cpp` và `Game.hpp`:**
+    - Quản lý vòng đời của trò chơi và các trạng thái khác nhau như khởi động, chơi game, tạm dừng, và kết thúc.
+    - Chứa hàm `main()` của trò chơi, nơi bắt đầu và quản lý vòng lặp game chính.
+  - **`GameState.cpp` và `GameState.hpp`:**
+    - Quản lý trạng thái chơi game chính, bao gồm khởi tạo, xử lý đầu vào, cập nhật trạng thái và vẽ các đối tượng lên màn hình.
+  - **`SplashState.cpp` và `SplashState.hpp`:**
+    - Quản lý trạng thái khởi động ban đầu của trò chơi, như hiển thị logo hoặc màn hình mở đầu.
+  - **`MainMenuState.cpp` và `MainMenuState.hpp`:**
+    - Quản lý trạng thái menu chính của trò chơi, nơi người chơi có thể bắt đầu trò chơi mới, xem bảng xếp hạng hoặc thoát khỏi trò chơi.
+  - **`GameOverState.cpp` và `GameOverState.hpp`:**
+    - Quản lý trạng thái kết thúc trò chơi, hiển thị điểm số và cung cấp tùy chọn để chơi lại hoặc quay lại menu chính.
+  - **`Pipe.cpp` và `Pipe.hpp`:**
+    - Quản lý và điều khiển các ống, bao gồm vị trí, di chuyển, và sự tương tác với chú chim.
+  - **`Bird.cpp` và `Bird.hpp`:**
+    - Quản lý chú chim, bao gồm hoạt ảnh, chuyển động và tương tác với các vật phẩm và ống.
+  - **`Land.cpp` và `Land.hpp`:**
+    - Quản lý mặt đất trong trò chơi, bao gồm di chuyển và phát hiện va chạm với chú chim.
+  - **`Collision.cpp` và `Collision.hpp`:**
+    - Xử lý phát hiện va chạm giữa chú chim với các ống, vật phẩm và mặt đất.
+  - **`HUD.cpp` và `HUD.hpp`:**
+    - Quản lý giao diện HUD, hiển thị điểm số, số lượng khiên chắn, và các thông tin khác trong trò chơi.
+  - **`InputManager.cpp` và `InputManager.hpp`:**
+    - Quản lý các đầu vào từ bàn phím và chuột, xử lý các sự kiện như click chuột hoặc nhấn phím.
+  - **`AssetManager.cpp` và `AssetManager.hpp`:**
+    - Quản lý việc tải và lưu trữ các tài nguyên như hình ảnh, âm thanh, và phông chữ, đảm bảo rằng chúng có sẵn khi cần sử dụng.
+
+### **Folder `music`:**
+- **Xử lý phần âm thanh của game**:
+  - Sử dụng thư viện `SFML Audio` để phát nhạc nền và các hiệu ứng âm thanh trong trò chơi.
+  - Các tệp âm thanh bao gồm nhạc nền, âm thanh va chạm, âm thanh cánh vỗ và âm thanh điểm số.
+
+### **Folder `include`:**
+- **Chứa các tệp header của game**:
+  - Bao gồm các định nghĩa, cấu trúc dữ liệu, và khai báo hàm cần thiết để xây dựng trò chơi.
+
+### **Folder `bin`:**
+- **Chứa các tệp thực thi của trò chơi sau khi biên dịch**:
+  - `FlappyBird.exe`: Tệp thực thi chính của trò chơi, được tạo ra sau khi build thành công dự án.
+
+### **`CMakeLists.txt`:**
+- **Quản lý quá trình biên dịch và liên kết các thư viện**:
+  - Định cấu hình và quản lý việc build dự án, bao gồm việc liên kết với thư viện `SFML` và các thư viện cần thiết khác.
