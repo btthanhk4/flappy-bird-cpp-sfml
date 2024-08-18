@@ -19,6 +19,9 @@ namespace Sonar
 		void DrawPipes();
 		void RandomisePipeOffset();
 		float pipeMovementSpeed;
+		float pipeVerticalSpeed = 50.0f;  // Tốc độ di chuyển theo chiều dọc của cột
+		bool movingUp = true;             // Trạng thái di chuyển lên/xuống của cột
+
 
 		const std::vector<sf::Sprite>& GetSprites() const;
 		std::vector<sf::Sprite>& GetScoringSprites();
