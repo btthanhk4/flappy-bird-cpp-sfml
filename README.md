@@ -1,19 +1,19 @@
-## Giáo viên hướng dẫn: TS. Lê Đức Trọng
+## **Giáo viên hướng dẫn: TS. Lê Đức Trọng**
 
-## Sinh viên: Bùi Tiến Thành - 22027547
+## **Sinh viên: Bùi Tiến Thành - 22027547**
 
 ---
 
-### **Trải nghiệm game:**
+### **Trải nghiệm game**
+
 Flappy Bird mang đến một trải nghiệm hoàn toàn mới với những cải tiến đặc biệt, bao gồm việc chuyển đổi giữa các bản đồ sáng và tối, sự xuất hiện ngẫu nhiên của các vật phẩm đặc biệt giúp thay đổi tốc độ, điểm số và khả năng phòng thủ của người chơi.
 
 ---
 
-## **Mục lục:**
+## **Mục lục**
 - [Giới thiệu game](#giới-thiệu-game)
 - [Cách tải game](#cách-tải-game)
-  - [Cách 1: Không bao gồm code](#cách-1-không-bao-gồm-code)
-  - [Cách 2: Bao gồm code và có thể biên dịch](#cách-2-bao-gồm-code-và-có-thể-biên-dịch)
+  - [Bao gồm code và có thể biên dịch](#bao-gồm-code-và-có-thể-biên-dịch)
 - [Bắt đầu game](#bắt-đầu-game)
 - [Các thành phần trong game](#các-thành-phần-trong-game)
 - [Cách chơi](#cách-chơi)
@@ -32,9 +32,14 @@ Flappy Bird là một game thuộc thể loại endless runner. Người chơi �
 ---
 
 ## **Cách tải game**
-### **Bao gồm code và có thể biên dịch.**
 
-1. Clone repo này về máy: `git clone https://github.com/YourRepo/FlappyBird.git`
+### **Bao gồm code và có thể biên dịch**
+
+1. Tải project bản zip về máy:
+   <div style="text-align: center;">
+     <img src="https://github.com/user-attachments/assets/fb59a041-97e1-486b-9d8a-ebad40a22d8d" alt="download" width="150">
+   </div>
+
 2. Cài đặt môi trường phát triển bao gồm các công cụ như gcc/g++, và thư viện SFML.
 3. Mở dự án bằng Visual Studio 2022 rồi build và chạy dự án.
 
@@ -45,19 +50,19 @@ Flappy Bird là một game thuộc thể loại endless runner. Người chơi �
 1. Chạy trò chơi và chờ đến màn hình chính.
 2. Click vào nút “START” để bắt đầu chơi.
 
-<div style="text-align: center;">
-  <img src="https://github.com/user-attachments/assets/0c6ab891-f448-4375-86ab-3b18c4b6e7b0" alt="start" width="300">
-</div>
+   <div style="text-align: center;">
+     <img src="https://github.com/user-attachments/assets/0c6ab891-f448-4375-86ab-3b18c4b6e7b0" alt="start" width="300">
+   </div>
 
 3. Khi vào game, nhấn phím hoặc click chuột để điều khiển chú chim.
 
-<div style="text-align: center;">
-  <img src="https://github.com/user-attachments/assets/d35c9a98-58ba-4874-8e55-4a9765669120" alt="game" width="300">
-</div>
+   <div style="text-align: center;">
+     <img src="https://github.com/user-attachments/assets/d35c9a98-58ba-4874-8e55-4a9765669120" alt="game" width="300">
+   </div>
 
 ---
 
-## **Các thành phần trong game:**
+## **Các thành phần trong game**
 
 - **Chim**: Nhân vật chính mà bạn sẽ điều khiển.
   <div style="text-align: center;">
@@ -95,8 +100,9 @@ Flappy Bird là một game thuộc thể loại endless runner. Người chơi �
     <div style="text-align: center;">
       <img src="https://github.com/user-attachments/assets/f87b5d05-43e7-41b4-9b7c-be54133621d8" alt="Boom" width="150">
     </div>
-  - **Phần âm nhạc và thu thập vật phẩm khiên**: Bạn có thể vừa nghe nhạc vừa chơi game, rất thú vị phải không. Bên cạnh đó còn hiển thị số lượng khiên chắn bạn đang có
-<div style="text-align: center;">
+
+  - **Phần âm nhạc và thu thập vật phẩm khiên**: Bạn có thể vừa nghe nhạc vừa chơi game, rất thú vị phải không? Bên cạnh đó còn hiển thị số lượng khiên chắn bạn đang có.
+    <div style="text-align: center;">
       <img src="https://github.com/user-attachments/assets/2ddf5391-4bd9-4a6d-8324-4928af68ad22" alt="Music" width="150">
     </div>
 
