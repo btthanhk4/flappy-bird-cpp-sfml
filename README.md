@@ -151,17 +151,15 @@ Flappy Bird là một game thuộc thể loại endless runner. Người chơi �
 
 ## **Về source code game:**
 
-### **Folder `assets`:**
+### **Folder `Resources`:**
 - **Chứa các tài nguyên game**:
   - Hình ảnh: Bao gồm các hình ảnh của chú chim, ống, nền, vật phẩm đặc biệt, và các nút điều khiển.
   - Âm thanh: Chứa các tệp âm thanh như nhạc nền, âm thanh va chạm, âm thanh cánh vỗ, và âm thanh tính điểm.
-  - Phông chữ: Chứa phông chữ sử dụng trong game, ví dụ như phông chữ cho HUD (Heads-Up Display).
+  - Phông chữ: Chứa phông chữ sử dụng trong game.
 
-### **Folder `src`:**
-- **Chứa mã nguồn của trò chơi**:
+### **Các lớp chính của mã nguồn:**
   - **`Game.cpp` và `Game.hpp`:**
     - Quản lý vòng đời của trò chơi và các trạng thái khác nhau như khởi động, chơi game, tạm dừng, và kết thúc.
-    - Chứa hàm `main()` của trò chơi, nơi bắt đầu và quản lý vòng lặp game chính.
   - **`GameState.cpp` và `GameState.hpp`:**
     - Quản lý trạng thái chơi game chính, bao gồm khởi tạo, xử lý đầu vào, cập nhật trạng thái và vẽ các đối tượng lên màn hình.
   - **`SplashState.cpp` và `SplashState.hpp`:**
