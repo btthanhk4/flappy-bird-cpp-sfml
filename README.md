@@ -8,6 +8,10 @@
 
 **Link video trải nghiệm:** [https://youtu.be/6bHyoTrF6y0](https://youtu.be/6bHyoTrF6y0)
 
+Flappy Bird mang đến một trải nghiệm hoàn toàn mới với những cải tiến đặc biệt, bao gồm việc chuyển đổi giữa các bản đồ sáng và tối, sự xuất hiện ngẫu nhiên của các vật phẩm đặc biệt giúp thay đổi tốc độ, điểm số và khả năng phòng thủ của người chơi.
+
+---
+
 ## **Mục lục**
 - [Giới thiệu game](#giới-thiệu-game)
 - [Cách tải game](#cách-tải-game)
@@ -20,6 +24,8 @@
   - [Điều thú vị của game](#điều-thú-vị-của-game)
 - [Chiến thắng và thất bại](#chiến-thắng-và-thất-bại)
 - [Về source code game](#về-source-code-game)
+- [Nguồn tham khảo](#nguồn-tham-khảo)
+- [Hướng phát triển](#hướng-phát-triển)
 
 ---
 
@@ -103,6 +109,14 @@ Flappy Bird là một game thuộc thể loại endless runner. Người chơi �
     <div style="text-align: center;">
       <img src="https://github.com/user-attachments/assets/2ddf5391-4bd9-4a6d-8324-4928af68ad22" alt="Music" width="150">
     </div>
+    
+  - **Các huy chương khi vượt qua các mốc điểm**:
+    <div style="text-align: center;">
+      <img src="https://github.com/user-attachments/assets/4ae489e9-6e4b-416b-8f4b-c44ddb78c531" alt="Bronze-Medal" width="100">
+      <img src="https://github.com/user-attachments/assets/3548c3aa-3df6-49c1-876b-16e08d329756" alt="Gold-Medal" width="100">
+      <img src="https://github.com/user-attachments/assets/1c07a543-25db-4b34-ad5a-5d9e842e44cb" alt="Platinum-Medal" width="100">
+      <img src="https://github.com/user-attachments/assets/a8bb9227-0578-49ff-825c-f7a0c81ecb22" alt="Silver-Medal" width="100">
+    </div>
 
 ---
 
@@ -129,7 +143,9 @@ Flappy Bird là một game thuộc thể loại endless runner. Người chơi �
     <img src="https://github.com/user-attachments/assets/39c8ddba-fffd-4187-b244-a2ad3e6e559b" alt="day_map" width="300">
   </div>
 
-  **Map ban đêm:**
+  **Map
+
+ ban đêm:**
   <div style="text-align: center;">
     <img src="https://github.com/user-attachments/assets/aa113059-912b-46f6-88a7-cf9b26db25f8" alt="night_map" width="300">
   </div>
@@ -180,3 +196,25 @@ Flappy Bird là một game thuộc thể loại endless runner. Người chơi �
     - Quản lý các đầu vào từ bàn phím và chuột, xử lý các sự kiện như click chuột hoặc nhấn phím.
   - **`AssetManager.cpp` và `AssetManager.hpp`:**
     - Quản lý việc tải và lưu trữ các tài nguyên như hình ảnh, âm thanh, và phông chữ, đảm bảo rằng chúng có sẵn khi cần sử dụng.
+
+---
+
+## **Nguồn tham khảo**
+
+Game Flappy Bird phiên bản này được phát triển dựa trên ý tưởng từ trò chơi gốc Flappy Bird với những cải tiến độc đáo. Quá trình phát triển game đã tham khảo và áp dụng các kiến thức từ nhiều nguồn tài liệu và công cụ sau:
+
+- **Tham khảo mã nguồn và cấu trúc dự án**: Hướng dẫn từ Lazy Foo và tài liệu của SFML, tham khảo logic game từ video trên youtube: [Youtube](https://www.youtube.com/watch?v=elV-DqaYWZo&list=PLRtjMdoYXLf7DB3--POF9lYzaZu0poT5V&index=7)
+- **Tài nguyên đồ họa và âm thanh**: Các hình ảnh được lấy từ  itch.io, âm thanh sưu tầm từ nhiều nguồn.
+
+---
+
+## **Hướng phát triển**
+
+Để nâng cao trải nghiệm người chơi và phát triển game trong tương lai, các ý tưởng sau sẽ được xem xét và triển khai:
+
+- **Tối ưu hóa hiệu suất**: Cải thiện hiệu suất game để giảm tình trạng giật, lag, đặc biệt khi có nhiều vật phẩm và đối tượng trên màn hình.
+- **Thêm nhiều loại vật phẩm**: Phát triển thêm các loại vật phẩm mới với các hiệu ứng đặc biệt như tăng điểm số, tạo khiên chắn, hoặc thay đổi tốc độ di chuyển của các cột, giúp người chơi có nhiều lựa chọn chiến thuật hơn.
+- **Cải thiện đồ họa và giao diện**: Nâng cấp giao diện người dùng và thêm các hiệu ứng hình ảnh, tạo trải nghiệm hấp dẫn và bắt mắt hơn.
+- **Phát triển hệ thống âm thanh**: Cải tiến hệ thống âm thanh, bao gồm thêm nhạc nền mới, hiệu ứng âm thanh phong phú hơn và các nút điều chỉnh âm lượng, chuyển đổi bài nhạc trong khi chơi.
+
+---
